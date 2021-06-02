@@ -1,3 +1,10 @@
+"""
+Copyright (c) Facebook, Inc. and its affiliates.
+All rights reserved.
+This source code is licensed under the license found in the
+LICENSE file in the root directory of this source tree.
+"""
+
 cater_split=$1 #max2action or all_actions
 start_idx=$2
 end_idx=$3
