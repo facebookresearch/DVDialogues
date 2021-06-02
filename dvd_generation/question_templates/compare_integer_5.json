@@ -1,0 +1,635 @@
+[
+    {
+        "text": [
+            "Does the <Z> <C> <M> <S> <A> as frequently as the <Z2> <C2> <M2> <S2> <A2>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A2>"
+                ],
+                "inputs": [
+                    4
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [
+                    2,
+                    5
+                ],
+                "type": "equal_integer"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            },
+            {
+                "type": "Action",
+                "name": "<A2>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ],
+                    [
+                        4,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "OUT_NEQ"
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A2>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "UNIQUE_NEQ"
+            },
+            {
+                "type": "NOT_CONTAIN_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional",
+        "action_remark": {
+            "<A>": "action_verb",
+            "<A2>": "action_verb_singular"
+        },
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                }
+            ],
+            [
+                4,
+                {
+                    "side_inputs": [
+                        "<Z2>",
+                        "<C2>",
+                        "<M2>",
+                        "<S2>"
+                    ],
+                    "inputs": [
+                        3
+                    ],
+                    "type": "filter_unique"
+                }
+            ]
+        ],
+        "answer_obj": null,
+        "ref_remark": "none",
+        "unique_obj": null
+    },
+    {
+        "text": [
+            "Does the <Z> <C> <M> <S> <A> less frequently than the <Z2> <C2> <M2> <S2> <A2>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A2>"
+                ],
+                "inputs": [
+                    4
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [
+                    2,
+                    5
+                ],
+                "type": "less_than"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            },
+            {
+                "type": "Action",
+                "name": "<A2>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ],
+                    [
+                        4,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "OUT_NEQ"
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A2>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "UNIQUE_NEQ"
+            },
+            {
+                "type": "NOT_CONTAIN_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional",
+        "action_remark": {
+            "<A>": "action_verb",
+            "<A2>": "action_verb_singular"
+        },
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                }
+            ],
+            [
+                4,
+                {
+                    "side_inputs": [
+                        "<Z2>",
+                        "<C2>",
+                        "<M2>",
+                        "<S2>"
+                    ],
+                    "inputs": [
+                        3
+                    ],
+                    "type": "filter_unique"
+                }
+            ]
+        ],
+        "answer_obj": null,
+        "ref_remark": "none",
+        "unique_obj": null
+    },
+    {
+        "text": [
+            "Does the <Z> <C> <M> <S> <A> more frequently than the <Z2> <C2> <M2> <S2> <A2>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A2>"
+                ],
+                "inputs": [
+                    4
+                ],
+                "type": "action_count"
+            },
+            {
+                "inputs": [
+                    2,
+                    5
+                ],
+                "type": "greater_than"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            },
+            {
+                "type": "Action",
+                "name": "<A2>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ],
+                    [
+                        4,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "OUT_NEQ"
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A2>"
+                ]
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "params": [
+                    1,
+                    4
+                ],
+                "type": "UNIQUE_NEQ"
+            },
+            {
+                "type": "NOT_CONTAIN_ACT",
+                "params": [
+                    "<A2>",
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional",
+        "action_remark": {
+            "<A>": "action_verb",
+            "<A2>": "action_verb_singular"
+        },
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                }
+            ],
+            [
+                4,
+                {
+                    "side_inputs": [
+                        "<Z2>",
+                        "<C2>",
+                        "<M2>",
+                        "<S2>"
+                    ],
+                    "inputs": [
+                        3
+                    ],
+                    "type": "filter_unique"
+                }
+            ]
+        ],
+        "answer_obj": null,
+        "ref_remark": "none",
+        "unique_obj": null
+    }
+]

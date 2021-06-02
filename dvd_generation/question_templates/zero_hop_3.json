@@ -1,0 +1,1279 @@
+[
+    {
+        "text": [
+            "How many <Z> <C> <M> <S>s are there?",
+            "What number of <Z> <C> <M> <S>s are there?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "How many <A> <Z> <C> <M> <S>s are there?",
+            "What number of <A> <Z> <C> <M> <S>s are there?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "Are there any <Z> <C> <M> <S>s?",
+            "Are any <Z> <C> <M> <S>s visible?",
+            "Is there a <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "Are there any <A> <Z> <C> <M> <S>s?",
+            "Are any <A> <Z> <C> <M> <S>s visible?",
+            "Is there a <A> <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What shape is the <Z> <C> <M> <S>?",
+            "What is the shape of the <Z> <C> <M> <S>?",
+            "The <Z> <C> <M> <S> has what shape?",
+            "What is the shape of the <Z> <C> <M> <S>?",
+            "There is a <Z> <C> <M> <S>; what shape is it?",
+            "The <Z> <C> <M> <S> is what shape?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_shape"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<S>"
+                ],
+                "type": "NULL"
+            }
+        ],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "What shape is the <A> <Z> <C> <M> <S>?",
+            "What is the shape of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what shape?",
+            "What is the shape of the <A> <Z> <C> <M> <S>?",
+            "There is a <A> <Z> <C> <M> <S>; what shape is it?",
+            "The <A> <Z> <C> <M> <S> is what shape?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_shape"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<S>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What material is the <Z> <C> <M> <S>?",
+            "What is the material of the <Z> <C> <M> <S>?",
+            "What is the <Z> <C> <M> <S> made of?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_material"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<M>"
+                ],
+                "type": "NULL"
+            }
+        ],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "What material is the <A> <Z> <C> <M> <S>?",
+            "What is the material of the <A> <Z> <C> <M> <S>?",
+            "What is the <A> <Z> <C> <M> <S> made of?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_material"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<M>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What color is the <Z> <C> <M> <S>?",
+            "What is the color of the <Z> <C> <M> <S>?",
+            "The <Z> <C> <M> <S> has what color?",
+            "The <Z> <C> <M> <S> is what color?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_color"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<C>"
+                ],
+                "type": "NULL"
+            }
+        ],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "What color is the <A> <Z> <C> <M> <S>?",
+            "What is the color of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what color?",
+            "The <A> <Z> <C> <M> <S> is what color?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_color"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<C>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What size is the <Z> <C> <M> <S>?",
+            "What is the size of the <Z> <C> <M> <S>?",
+            "The <Z> <C> <M> <S> has what size?",
+            "The <Z> <C> <M> <S> is what size?",
+            "How big is the <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_size"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<Z>"
+                ],
+                "type": "NULL"
+            }
+        ],
+        "interval_type": "none"
+    },
+    {
+        "text": [
+            "What size is the <A> <Z> <C> <M> <S>?",
+            "What is the size of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what size?",
+            "The <A> <Z> <C> <M> <S> is what size?",
+            "How big is the <A> <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "action_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_size"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<Z>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "How many <A> <Z> <C> <M> <S>s are there?",
+            "What number of <A> <Z> <C> <M> <S>s are there?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "Are there any <A> <Z> <C> <M> <S>s?",
+            "Are any <A> <Z> <C> <M> <S>s visible?",
+            "Is there a <A> <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "What shape is the <A> <Z> <C> <M> <S>?",
+            "What is the shape of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what shape?",
+            "What is the shape of the <A> <Z> <C> <M> <S>?",
+            "There is a <A> <Z> <C> <M> <S>; what shape is it?",
+            "The <A> <Z> <C> <M> <S> is what shape?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_shape"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<S>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "What material is the <A> <Z> <C> <M> <S>?",
+            "What is the material of the <A> <Z> <C> <M> <S>?",
+            "What is the <A> <Z> <C> <M> <S> made of?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_material"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<M>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "What color is the <A> <Z> <C> <M> <S>?",
+            "What is the color of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what color?",
+            "The <A> <Z> <C> <M> <S> is what color?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_color"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<C>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "What size is the <A> <Z> <C> <M> <S>?",
+            "What is the size of the <A> <Z> <C> <M> <S>?",
+            "The <A> <Z> <C> <M> <S> has what size?",
+            "The <A> <Z> <C> <M> <S> is what size?",
+            "How big is the <A> <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<A>",
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "actions_filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_size"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<Z>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional"
+    },
+    {
+        "text": [
+            "How many times does the <Z> <C> <M> <S>s <A>?",
+            "How many times does the <Z> <C> <M> <S>s <A> in total?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<A>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "action_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "NOT_NULL_ACT",
+                "params": [
+                    "<A>"
+                ]
+            },
+            {
+                "type": "NOT_STATIC_ACT",
+                "params": [
+                    "<A>"
+                ]
+            }
+        ],
+        "interval_type": "compositional",
+        "action_remark": {
+            "<A>": "action_verb"
+        }
+    },
+    {
+        "text": [
+            "What types of actions does the <Z> <C> <M> <S> undertake?",
+            "What are the activities that the <Z> <C> <M> <S> perform?",
+            "What is the <Z> <C> <M> <S> doing?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_action_set"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            }
+        ],
+        "constraints": [],
+        "interval_type": "compositional"
+    }
+]

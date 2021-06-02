@@ -1,0 +1,9 @@
+debug=1
+fea_dir=/workspace/hungle/data/dvd/video-classification-3d-cnn-pytorch/outputs/resnext_101/
+data_dir=/workspace/hungle/cater-dialog/question_generation/output/
+output_dir=exps_test//baseline/dvd
+num_workers=0
+device=0
+num_epochs=3
+batch_size=32
+verbose=0

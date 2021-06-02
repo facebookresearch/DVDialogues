@@ -1,0 +1,99 @@
+,filename,template_idx,CLEVR_question_category,CATER_interval_category,text
+0,zero_hop_5.json,0,count,none,"How many <Z> <C> <M> <S>s are there?
+What number of <Z> <C> <M> <S>s are there?"
+1,zero_hop_5.json,1,count,atomic,"How many <A> <Z> <C> <M> <S>s are there?
+What number of <A> <Z> <C> <M> <S>s are there?"
+2,zero_hop_5.json,2,exist,none,"Is there any <Z> <C> <M> <S>?
+Is there a <Z> <C> <M> <S>?"
+3,zero_hop_5.json,3,exist,atomic,"Is there any <A> <Z> <C> <M> <S>?
+Is there a <A> <Z> <C> <M> <S>?"
+4,zero_hop_5.json,4,query,none,"What shape is the <Z> <C> <M> <S>?
+What is the shape of the <Z> <C> <M> <S>?
+What is the shape of the <Z> <C> <M> <S>?"
+5,zero_hop_5.json,5,query,atomic,"What shape is the <A> <Z> <C> <M> <S>?
+What is the shape of the <A> <Z> <C> <M> <S>?
+What is the shape of the <A> <Z> <C> <M> <S>?"
+6,zero_hop_5.json,6,query,none,"What material is the <Z> <C> <M> <S>?
+What is the material of the <Z> <C> <M> <S>?
+What is the <Z> <C> <M> <S> made of?"
+7,zero_hop_5.json,7,query,atomic,"What material is the <A> <Z> <C> <M> <S>?
+What is the material of the <A> <Z> <C> <M> <S>?
+What is the <A> <Z> <C> <M> <S> made of?"
+8,zero_hop_5.json,8,query,none,"What color is the <Z> <C> <M> <S>?
+What is the color of the <Z> <C> <M> <S>?"
+9,zero_hop_5.json,9,query,atomic,"What color is the <A> <Z> <C> <M> <S>?
+What is the color of the <A> <Z> <C> <M> <S>?"
+10,zero_hop_5.json,10,query,none,"What size is the <Z> <C> <M> <S>?
+What is the size of the <Z> <C> <M> <S>?
+How big is the <Z> <C> <M> <S>?"
+11,zero_hop_5.json,11,query,atomic,"What size is the <A> <Z> <C> <M> <S>?
+What is the size of the <A> <Z> <C> <M> <S>?
+How big is the <A> <Z> <C> <M> <S>?"
+12,zero_hop_5.json,12,count,compositional,"How many <A> <Z> <C> <M> <S>s are there?
+What number of <A> <Z> <C> <M> <S>s are there?"
+13,zero_hop_5.json,13,exist,compositional,"Is there any <A> <Z> <C> <M> <S>?
+Is there a <A> <Z> <C> <M> <S>?"
+14,zero_hop_5.json,14,query,compositional,"What shape is the <A> <Z> <C> <M> <S>?
+What is the shape of the <A> <Z> <C> <M> <S>?
+What is the shape of the <A> <Z> <C> <M> <S>?"
+15,zero_hop_5.json,15,query,compositional,"What material is the <A> <Z> <C> <M> <S>?
+What is the material of the <A> <Z> <C> <M> <S>?
+What is the <A> <Z> <C> <M> <S> made of?"
+16,zero_hop_5.json,16,query,compositional,"What color is the <A> <Z> <C> <M> <S>?
+What is the color of the <A> <Z> <C> <M> <S>?"
+17,zero_hop_5.json,17,query,compositional,"What size is the <A> <Z> <C> <M> <S>?
+What is the size of the <A> <Z> <C> <M> <S>?
+How big is the <A> <Z> <C> <M> <S>?"
+18,zero_hop_5.json,18,count,compositional,"How many times does the <Z> <C> <M> <S> <A>?
+How many times does the <Z> <C> <M> <S> <A> in total?"
+19,zero_hop_5.json,19,query,compositional,"What types of actions does the <Z> <C> <M> <S> undertake?
+What are the activities that the <Z> <C> <M> <S> perform?
+What is the <Z> <C> <M> <S> doing?"
+20,zero_hop_5.json,20,query,compositional,"What type of action does the <Z> <C> <M> <S> undertake <O> ?
+What activity that the <Z> <C> <M> <S> perform <O> ?
+What is the <Z> <C> <M> <S> doing <O> ?"
+21,zero_hop_5.json,21,query,compositional,"What types of actions does the <Z> <C> <M> <S> undertake <F> ?
+What activities that the <Z> <C> <M> <S> perform <F> ?"
+22,compare_integer_5.json,0,compare_integer,compositional,Does the <Z> <C> <M> <S> <A> as frequently as the <Z2> <C2> <M2> <S2> <A2>?
+23,compare_integer_5.json,1,compare_integer,compositional,Does the <Z> <C> <M> <S> <A> less frequently than the <Z2> <C2> <M2> <S2> <A2>?
+24,compare_integer_5.json,2,compare_integer,compositional,Does the <Z> <C> <M> <S> <A> more frequently than the <Z2> <C2> <M2> <S2> <A2>?
+25,comparison_5.json,0,comparison,compositional,"Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> perform the same set of activities?
+Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> undertake the same types of actions?
+Does the <Z> <C> <M> <S> perform the same set of activities as the <Z2> <C2> <M2> <S2>?
+Does the <Z> <C> <M> <S> undertake the same types of actions as the <Z2> <C2> <M2> <S2>?"
+26,comparison_5.json,1,comparison,compositional,"Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> perform the same sequence of activities?
+Does the <Z> <C> <M> <S> perform the same sequence of activities as the <Z2> <C2> <M2> <S2>?"
+27,one_hop_5.json,0,count,atomic,"What number of <A2> <Z2> <C2> <M2> <S2>s are <R> the <Z> <C> <M> <S>?
+How many <A2> <Z2> <C2> <M2> <S2>s are <R> the <Z> <C> <M> <S>?"
+28,one_hop_5.json,1,exist,atomic,Is there any <A2> <Z2> <C2> <M2> <S2> <R> the <Z> <C> <M> <S>?
+29,one_hop_5.json,2,query,atomic,"What size is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+What is the size of the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+How big is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?"
+30,one_hop_5.json,3,query,atomic,"What color is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+What is the color of the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?"
+31,one_hop_5.json,4,query,atomic,"What is the material of the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+What material is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+What is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> made of?"
+32,one_hop_5.json,5,query,atomic,"What shape is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?
+What is the shape of the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?"
+33,one_hop_5.json,6,query,atomic,"What is the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> doing?
+What action does the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> undertake?
+What activity does the <A2> <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> perform?"
+34,same_relate_5.json,0,exist,compositional,"Is there anything else that performs the same set of activities as the <Z> <C> <M> <S>?
+Is there any other thing that has the same types of actions as the <Z> <C> <M> <S>?
+Is there any other thing with the same set of activities performed by the <Z> <C> <M> <S>?
+Is there any other object that has the same types of actions as the <Z> <C> <M> <S>?
+Is there any other object with the same set of activities performed by the <Z> <C> <M> <S>?"
+35,same_relate_5.json,1,exist,compositional,"Is there anything else that performs the same sequence of activities as the <Z> <C> <M> <S>?
+Is there any other thing with the same sequence of activities performed by the <Z> <C> <M> <S>?
+Is there any other object with the same sequence of activities performed by the <Z> <C> <M> <S>?"
+36,same_relate_5.json,2,count,compositional,"How many other things perform the same set of activities as the <Z> <C> <M> <S>?
+How many other things undertake the same types of actions as the <Z> <C> <M> <S>?
+How many other things with the same set of activities performed by the <Z> <C> <M> <S>?
+How many other objects perform the same set of activities as the <Z> <C> <M> <S>?
+How many other objects undertake the same types of actions as the <Z> <C> <M> <S>?
+How many other objects with the same set of activities performed by the <Z> <C> <M> <S>?"
+37,same_relate_5.json,3,count,compositional,"How many other things perform the same sequence of activities as the <Z> <C> <M> <S>?
+How many other things with the same sequence activities performed by the <Z> <C> <M> <S>?
+How many other objects perform the same sequence of activities as the <Z> <C> <M> <S>?
+How many other objects with the same sequence of activities performed by the <Z> <C> <M> <S>?"

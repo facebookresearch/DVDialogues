@@ -1,0 +1,1566 @@
+[
+    {
+        "text": [
+            "How many <A4> <Z4> <C4> <M4> <S4>s are <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What number of <A4> <Z4> <C4> <M4> <S4>s are <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how many <A4> <Z4> <C4> <M4> <S4>s are <R3> it?",
+            "There is a <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what number of <A4> <Z4> <C4> <M4> <S4>s are <R3> it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "Are there any <A4> <Z4> <C4> <M4> <S4>s [that are] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "Is there a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; are there any <A4> <Z4> <C4> <M4> <S4>s [that are] <R3> it?",
+            "There is a <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; is there a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What size is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the size of the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "How big is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what size is it?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its size?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how big is it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    4
+                ],
+                "type": "query_size"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        4,
+                        [
+                            "<A4>",
+                            "<Z4>",
+                            "<C4>",
+                            "<M4>",
+                            "<S4>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ACT_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    "<Z4>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What shape is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the shape of the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is what shape?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what shape is it?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its shape?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    4
+                ],
+                "type": "query_shape"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        4,
+                        [
+                            "<A4>",
+                            "<Z4>",
+                            "<C4>",
+                            "<M4>",
+                            "<S4>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ACT_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    "<S4>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What color is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the color of the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is what color?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what color is it?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its color?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    4
+                ],
+                "type": "query_color"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        4,
+                        [
+                            "<A4>",
+                            "<Z4>",
+                            "<C4>",
+                            "<M4>",
+                            "<S4>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ACT_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    "<C4>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What material is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the material of the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is made of what material?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its material?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is it made of?",
+            "What [material] is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> made of?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    4
+                ],
+                "type": "query_material"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        4,
+                        [
+                            "<A4>",
+                            "<Z4>",
+                            "<C4>",
+                            "<M4>",
+                            "<S4>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ACT_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    "<M4>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What action is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the action of the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "How big is the <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what action is it?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its action?",
+            "There is a <A4> <Z4> <C4> <M4> <S4> [that is] <R3> the <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how big is it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R3>",
+                    "<A4>",
+                    "<Z4>",
+                    "<C4>",
+                    "<M4>",
+                    "<S4>"
+                ],
+                "inputs": [
+                    3
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    4
+                ],
+                "type": "query_action"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R3>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z4>"
+            },
+            {
+                "type": "Color",
+                "name": "<C4>"
+            },
+            {
+                "type": "Material",
+                "name": "<M4>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S4>"
+            },
+            {
+                "type": "Action",
+                "name": "<A4>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        4,
+                        [
+                            "<A4>",
+                            "<Z4>",
+                            "<C4>",
+                            "<M4>",
+                            "<S4>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ACT_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        2,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z3>",
+                            "<C3>",
+                            "<M3>",
+                            "<S3>"
+                        ]
+                    ]
+                ],
+                "type": "NONUNIQUE_ATTR"
+            },
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    "<A4>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A4>",
+                    "<R3>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    }
+]

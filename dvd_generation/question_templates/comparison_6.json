@@ -1,0 +1,356 @@
+[
+    {
+        "text": [
+            "Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> perform the same set of activities?",
+            "Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> undertake the same types of actions?",
+            "Does the <Z> <C> <M> <S> perform the same set of activities as the <Z2> <C2> <M2> <S2>?",
+            "Does the <Z> <C> <M> <S> undertake the same types of actions as the <Z2> <C2> <M2> <S2>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_action_set"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_action_set"
+            },
+            {
+                "inputs": [
+                    4,
+                    5
+                ],
+                "type": "equal_action"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            },
+            {
+                "type": "Action",
+                "name": "<A2>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1,
+                    3
+                ],
+                "type": "OUT_NEQ"
+            },
+            {
+                "params": [
+                    1,
+                    3
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                }
+            ],
+            [
+                3,
+                {
+                    "side_inputs": [
+                        "<Z2>",
+                        "<C2>",
+                        "<M2>",
+                        "<S2>"
+                    ],
+                    "inputs": [
+                        2
+                    ],
+                    "type": "filter_unique"
+                }
+            ]
+        ],
+        "answer_obj": null,
+        "ref_remark": "none",
+        "unique_obj": null
+    },
+    {
+        "text": [
+            "Do the <Z> <C> <M> <S> and the <Z2> <C2> <M2> <S2> perform the same sequence of activities?",
+            "Does the <Z> <C> <M> <S> perform the same sequence of activities as the <Z2> <C2> <M2> <S2>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "query_action_seq"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_action_seq"
+            },
+            {
+                "inputs": [
+                    4,
+                    5
+                ],
+                "type": "equal_action"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            },
+            {
+                "type": "Action",
+                "name": "<A2>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ],
+                    [
+                        3,
+                        [
+                            "<Z2>",
+                            "<C2>",
+                            "<M2>",
+                            "<S2>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1,
+                    3
+                ],
+                "type": "OUT_NEQ"
+            },
+            {
+                "params": [
+                    1,
+                    3
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                }
+            ],
+            [
+                3,
+                {
+                    "side_inputs": [
+                        "<Z2>",
+                        "<C2>",
+                        "<M2>",
+                        "<S2>"
+                    ],
+                    "inputs": [
+                        2
+                    ],
+                    "type": "filter_unique"
+                }
+            ]
+        ],
+        "answer_obj": null,
+        "ref_remark": "none",
+        "unique_obj": null
+    }
+]

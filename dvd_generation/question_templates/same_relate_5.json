@@ -1,0 +1,508 @@
+[
+    {
+        "text": [
+            "Is there anything else that performs the same set of activities as the <Z> <C> <M> <S>?",
+            "Is there any other thing that has the same types of actions as the <Z> <C> <M> <S>?",
+            "Is there any other thing with the same set of activities performed by the <Z> <C> <M> <S>?",
+            "Is there any other object that has the same types of actions as the <Z> <C> <M> <S>?",
+            "Is there any other object with the same set of activities performed by the <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "same_action_set"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                },
+                null
+            ]
+        ],
+        "answer_obj": [
+            3,
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "exist"
+            }
+        ],
+        "ref_remark": "none",
+        "unique_obj": [
+            1,
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            }
+        ]
+    },
+    {
+        "text": [
+            "Is there anything else that performs the same sequence of activities as the <Z> <C> <M> <S>?",
+            "Is there any other thing with the same sequence of activities performed by the <Z> <C> <M> <S>?",
+            "Is there any other object with the same sequence of activities performed by the <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "same_action_seq"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                },
+                null
+            ]
+        ],
+        "answer_obj": [
+            3,
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "exist"
+            }
+        ],
+        "ref_remark": "none",
+        "unique_obj": [
+            1,
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            }
+        ]
+    },
+    {
+        "text": [
+            "How many other things perform the same set of activities as the <Z> <C> <M> <S>?",
+            "How many other things undertake the same types of actions as the <Z> <C> <M> <S>?",
+            "How many other things with the same set of activities performed by the <Z> <C> <M> <S>?",
+            "How many other objects perform the same set of activities as the <Z> <C> <M> <S>?",
+            "How many other objects undertake the same types of actions as the <Z> <C> <M> <S>?",
+            "How many other objects with the same set of activities performed by the <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "same_action_set"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                },
+                null
+            ]
+        ],
+        "answer_obj": [
+            3,
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "count"
+            }
+        ],
+        "ref_remark": "none",
+        "unique_obj": [
+            1,
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            }
+        ]
+    },
+    {
+        "text": [
+            "How many other things perform the same sequence of activities as the <Z> <C> <M> <S>?",
+            "How many other things with the same sequence activities performed by the <Z> <C> <M> <S>?",
+            "How many other objects perform the same sequence of activities as the <Z> <C> <M> <S>?",
+            "How many other objects with the same sequence of activities performed by the <Z> <C> <M> <S>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "inputs": [
+                    1
+                ],
+                "type": "same_action_seq"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Action",
+                "name": "<A>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    [
+                        1,
+                        [
+                            "<Z>",
+                            "<C>",
+                            "<M>",
+                            "<S>"
+                        ]
+                    ]
+                ],
+                "type": "MINIMAL_ATTR"
+            },
+            {
+                "params": [
+                    1
+                ],
+                "type": "UNIQUE_NEQ"
+            }
+        ],
+        "interval_type": "compositional",
+        "all_unique_objs": [
+            [
+                1,
+                {
+                    "side_inputs": [
+                        "<Z>",
+                        "<C>",
+                        "<M>",
+                        "<S>"
+                    ],
+                    "inputs": [
+                        0
+                    ],
+                    "type": "filter_unique"
+                },
+                null
+            ]
+        ],
+        "answer_obj": [
+            3,
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "count"
+            }
+        ],
+        "ref_remark": "none",
+        "unique_obj": [
+            1,
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            }
+        ]
+    }
+]

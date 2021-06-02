@@ -1,0 +1,66 @@
+,original,synonyms
+0,thing,"thing
+object"
+1,sphere,"sphere
+ball"
+2,cube,"cube
+block"
+3,spl,snitch
+4,large,"large
+big"
+5,small,small
+6,medium,average
+7,metal,"metallic
+metal
+shiny"
+8,rubber,"rubber
+matte"
+9,static,stationary
+10,flying,flying
+11,rotating,"rotating
+spinning"
+12,sliding,sliding
+13,moving,moving
+14,left,"left of
+to the left of
+on the left side of"
+15,right,"right of
+to the right of
+on the right side of"
+16,behind,behind
+17,front,in front of
+18,contained,contained
+19,above,above
+20,below,below
+21,whole video,"during the whole video
+throughout the whole video"
+22,during,"during the same time interval
+during the same time window
+during the same time period
+during this time interval
+during this time window
+during this time period"
+23,before,"before this time interval
+before this time window
+before this time period"
+24,after,"after this time interval
+after this time window
+after this time period"
+25,video_update,"what about up until now ? 
+how about up until now ?"
+26,<it>,"that object
+that thing"
+27,<given>,"given
+considering"
+28,<link>,"and
+"
+29,<among>,among
+30,<earlier>,"earlier mentioned
+aforementioned"
+31,moving actions,"movements
+moves
+activities"
+32,move,"move
+action
+activity
+movement"

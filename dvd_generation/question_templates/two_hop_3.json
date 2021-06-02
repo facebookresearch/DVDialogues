@@ -1,0 +1,994 @@
+[
+    {
+        "text": [
+            "How many <A3> <Z3> <C3> <M3> <S3>s are <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What number of <A3> <Z3> <C3> <M3> <S3>s are <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how many <A3> <Z3> <C3> <M3> <S3>s are <R2> it?",
+            "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what number of <A3> <Z3> <C3> <M3> <S3>s are <R2> it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_count"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "Are there any <A3> <Z3> <C3> <M3> <S3>s [that are] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "Is there a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; are there any <A3> <Z3> <C3> <M3> <S3>s [that are] <R2> it?",
+            "There is a <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; is there a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_exist"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What size is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the size of the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "How big is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what size is it?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its size?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how big is it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_size"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<Z3>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What color is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the color of the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is what color?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what color is it?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its color?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_color"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<C3>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What material is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the material of the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is made of what material?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its material?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is it made of?",
+            "What [material] is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> made of?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_material"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<M3>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What shape is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the shape of the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "The <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S> is what shape?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what shape is it?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its shape?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_shape"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<S3>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    },
+    {
+        "text": [
+            "What action is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "What is the action of the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "How big is the <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what action is it?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; what is its action?",
+            "There is a <A3> <Z3> <C3> <M3> <S3> [that is] <R2> the <Z2> <C2> <M2> <S2> [that is] <R> the <Z> <C> <M> <S>; how big is it?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<Z>",
+                    "<C>",
+                    "<M>",
+                    "<S>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>",
+                    "<Z2>",
+                    "<C2>",
+                    "<M2>",
+                    "<S2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R2>",
+                    "<A3>",
+                    "<Z3>",
+                    "<C3>",
+                    "<M3>",
+                    "<S3>"
+                ],
+                "inputs": [
+                    2
+                ],
+                "type": "relate_action_filter_unique"
+            },
+            {
+                "inputs": [
+                    3
+                ],
+                "type": "query_action"
+            }
+        ],
+        "params": [
+            {
+                "type": "Size",
+                "name": "<Z>"
+            },
+            {
+                "type": "Color",
+                "name": "<C>"
+            },
+            {
+                "type": "Material",
+                "name": "<M>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z2>"
+            },
+            {
+                "type": "Color",
+                "name": "<C2>"
+            },
+            {
+                "type": "Material",
+                "name": "<M2>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S2>"
+            },
+            {
+                "type": "Relation",
+                "name": "<R2>"
+            },
+            {
+                "type": "Size",
+                "name": "<Z3>"
+            },
+            {
+                "type": "Color",
+                "name": "<C3>"
+            },
+            {
+                "type": "Material",
+                "name": "<M3>"
+            },
+            {
+                "type": "Shape",
+                "name": "<S3>"
+            },
+            {
+                "type": "Action",
+                "name": "<A3>"
+            }
+        ],
+        "constraints": [
+            {
+                "params": [
+                    "<A3>"
+                ],
+                "type": "NULL"
+            },
+            {
+                "type": "STATIC_ACT",
+                "params": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "type": "CONTAIN_ACT",
+                "params": [
+                    "<A3>",
+                    "<R2>"
+                ]
+            }
+        ],
+        "interval_type": "atomic"
+    }
+]
