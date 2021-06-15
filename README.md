@@ -59,8 +59,10 @@ The repo contains the following:
     - `generate_dialogues.py`: main code to simulate dialogues
     - `run.sh`: script to run `generate_dialogues.py` with setting parameters
     - `filters`: filter functions to construct valid questions
-        - `dialogue_filters.py`:  simulate dependencies over turns
-        - `scene_filters.py`: create valid options for attribute filtering
+        - `dialogue_filters.py`:  filter functions to simulate dependencies over turns
+        - `scene_filters.py`: manage filter functions 
+        - `spatial_filters.py`: filter functions for valid object attributes
+        - `temporal_filters.py`: filter fuctions for valid object actions 
         - `constraint_filters.py`: check constraints by question types e.g. `NO_NULL` = no empty attribute value
     - `question_templates`:  contain predefined question templates, synonyms, and metadata json files. Many of the question templates are built upon templates from CLEVR.
         - `add_action_attribute.py`: add action as an attribute in each object
