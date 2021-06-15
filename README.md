@@ -65,21 +65,26 @@ The repo contains the following:
         - `temporal_filters.py`: filter fuctions for valid object actions 
         - `constraint_filters.py`: check constraints by question types e.g. `NO_NULL` = no empty attribute value
     - `question_templates`:  contain predefined question templates, synonyms, and metadata json files. Many of the question templates are built upon templates from CLEVR.
-        - `add_action_attribute.py`: add action as an attribute in each object
+        - `add_action_attribute.py`: add action as an attribute in each object e.g. "the moving cube"
         - `add_atomic_action_query.py`: add new question templates for query of intervals with atomic actions (e.g. object with max. 1 action)
         - `add_compositional_query.py`: add new question templates for query of intervals with compositional actions (e.g. object with max. >1 action)
-        - `add_cater_constraints.py`: add new constraint that is specific to CATER e.g. containment constraint
+        - `add_cater_constraints.py`: add new constraint that is specific to CATER e.g. object containment constraint (only cones can contain other objects) 
+        - `add_dialogue_constraints.py`: add new constraint to make questions compatible in a dialogue e.g. question contains potential reference candidates 
+        - `add_other_templates.py`: add new question templates e.g. question about an action based on the action's order
         - `create_templates.sh`: run all the above steps
     - `simulators`: process logical programs to obtain ground-truth answers and generate question sentences in natural language form
         - `template_dfs.py`: traverse through execution tree of program layouts
-        - `question_engine.py`: implement logical functions e.g. filter, count, exist, etc.
+        - `question_engine.py`: manage logical functions 
+        - `spatial_question_engine.py`: implement logical spatial-based functions e.g. object count, object exist, etc.
+        - `temporal_question_engine.py`: implement logical temporal-based functions e.g. action filter, action count, etc. 
         - `question_generator.py`: generate question sentences
     - `utils`: commonly used scripts
         - `configs.py`: set up script parameters e.g. directory, number of templates per video, etc.
         - `data_loader.py`: load data, including metadata, synonyms, templates, CATER files, etc.
-        - `dialogue_utils.py`: functions on simulated dialogues
-        - `scene_utils.py`: functions on scene annotation
+        - `dialogue_utils.py`: functions on simulated dialogue turns with linguistic dependencies 
+        - `scene_utils.py`: functions on scene annotation e.g. spatial relations
         - `utils.py`: other common functions
+        - `global_vars.py`: global variables e.g. acdtion mapping, action nouns/verbs
  - `dvd_codebase`: basic function to load DVD dataset 
 	 - `main.py`: main process to load videos, dialogues, vocabulary, and create batches 
 	 - `run.sh`: script to specify parameters, data and output directories 
@@ -88,6 +93,7 @@ The repo contains the following:
 		 - `data_handler.py`: functions to load dialogues, videos, and create vocabulary
 		 - `data_utils.py`: basic functions to support data loading and preprocessing
 		 - `dataset.py`: definition of Dataset and Batch class
+         - `analysis_utils.py`: functions to analyze output results e.g. by question types, question subtypes, transfer accuracy, etc. 
 #  Scripts
 Following these steps to preprocess CATER videos: 
 1. `cd cater_preprocessing`
