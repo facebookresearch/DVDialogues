@@ -49,6 +49,8 @@ The dataset statistics of DVD are:
 
 #  Structure
 
+The codes were built upon the codebase from [CLEVR](https://github.com/facebookresearch/clevr-dataset-gen). Thank you the authors for sharing!. 
+
 The repo contains the following:
 
 - `cater_preprocessing`: data preprocessing of CATER videos
