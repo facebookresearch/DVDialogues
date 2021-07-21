@@ -111,5 +111,42 @@ Following these steps to load and batch the dataset:
 1. `cd dvd_codebase`
 2. Load DVD dataset and create batches by running `./run.sh <gpu device id> <1 if debugging with small data else 0>`. Please change the parameter `data_dir` and `fea_dir` to the data and feature directories (e.g. unzipped location of *dvd_dialogues* and *dvd_resnext101*)
 
+# Data Exploration 
+We created a [notebook](https://github.com/facebookresearch/DVDialogues/blob/master/notebooks/explore_data.ipynb) in this repo to demonstrate how different annotations can be extracted from DVD dialogues. Specifically, we used an example CATER video and DVD dialogue and defined helper functions to display various annotation details, e.g. question types/subtypes, tracked objects, tracked intervals, etc. 
+
+- Each DVDialogue json file contains one dialogue for a specific video from CATER. All object ids/actions and frame ids are referenced from the annotations of the CATER video. 
+- Each dialogue has 10 turns. In each turn, the data is a dictionary with the following attributes: 
+    - `question`: a question about the video
+    - `answer`: an answer to the above question based on the visual content of the video 
+    - `turn_dependencies`: the cross-turn dependencies that are embedded in this turn. The 1st turn of each dialogue always have `none` type dependencies (no cross-turn relations) 
+        - `temporal`: relations that determine the video interval of the current turn, including: 
+            - `<1/2/3/4>_<flying/sliding/rotating>_among_<before/after/during>`: action reference to a set of action in the previous turn e.g. "among them, after the third slide" 
+            - `prior_<flying/sliding/rotating>_<before/after/during>`: action reference to a unique action in the previous turn e.g. "during this slide"
+            - `after`/`before`/`during`: interval references to the interval of the previous turn e.g. "after this period" 
+            - `video_update`: topic transfer (temporal) with incremental video input to the video input of the previous turn e.g. "what about up until now"
+            - `earlier_unique_obj_none`: interval with long-term object references e.g. "during the aforementioned yellow thing 's first rotation"
+            - `last_unique_obj_none`: interval with short-term object references e.g. "before its third rotation"
+        - `spatial`: topic transfer (spatial) from the previous turn, including: 
+            - `left` / `right`/ `front`/ `behind` e.g. "what about to the left of it?"
+        - `attribute`: topic transfer (attribute) from the previous turn, including: 
+            - `query_color`/ `query_shape`/ `query_size`/ `query_material` e.g. "what about its color?" 
+        - `object`: object references to objects mentioned in dialouge context, including:  
+            - `earlier_unique`: long-term object references (> 1 turn distance) e.g. "the earlier mentioned red sphere"
+            - `last_unique`: short-term object references (1-turn distance) e.g. "them", "it"
+    - `program`: the functional program that is used to solve the question in a multi-step reasoning process. This is a sequence of node, each node including the following attributes: 
+        - `type`: type of nodes e.g. `filter_color`, `count_object`, etc. 
+        - `inputs`: indices of the preceding nodes; their outputs are inputs to the current node 
+        - `side_inputs`: parameters of the current node e.g. "green", "yellow", "rubber", "before", "after", etc. 
+        - `_output`: the output of the current node e.g. object count, object ids, interval period by start/end frame id 
+        - Please refer to the Appendix in the paper for more details of functional program types and data types 
+    - `template`: template of the question, containing the information to determine the question interval type and question type/subtype. Other information includes: 
+        - `cutoff`: the cutoff event from the original CATER video. The input video of this turn will be from frame #0 to the cutoff event
+        - `used_periods`: contains all time periods up to the current turn. Each period is determine by a start event and end event 
+        - event: each cutoff event or start/end event is defined as by the start/end time of an object action. Event is in the form of `[<object_id>,start/end_rotating/sliding/flying, <order>, <frame id>]`
+        - if an event is `None`, it is either the start or the end of the original CATER video 
+        - `used_objects`: all unique objects that are mentioned up to the previous turn. This is used to solve any long-term object references in the question of the curren turn. This is a dictionary with key as the object id and the values are:
+            - `original_turn`: the original turn id the object was mentioned 
+            - object attributes mentioned in the dialogue so far: `<Z>`: size, `<C>`: color, `<M>`: material, `<S>`: shape 
+
 # License
 This project is licensed under the license found in the LICENSE file in the root directory of this source tree.
