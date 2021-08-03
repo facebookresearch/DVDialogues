@@ -14,24 +14,23 @@ A video-grounded dialogue system is required to understand both dialogue, which 
 
 If you find this code useful, consider citing our work:
 ```
-@article{DBLP:journals/corr/abs-2101-00151,
-  author    = {Hung Le and
-               Chinnadhurai Sankar and
-               Seungwhan Moon and
-               Ahmad Beirami and
-               Alborz Geramifard and
-               Satwik Kottur},
-  title     = {{DVD:} {A} Diagnostic Dataset for Multi-step Reasoning in Video Grounded
-               Dialogue},
-  journal   = {CoRR},
-  volume    = {abs/2101.00151},
-  year      = {2021},
-  url       = {https://arxiv.org/abs/2101.00151},
-  archivePrefix = {arXiv},
-  eprint    = {2101.00151},
-  timestamp = {Thu, 21 Jan 2021 14:42:30 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2101-00151.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@inproceedings{le-etal-2021-dvd,
+    title = "{DVD}: A Diagnostic Dataset for Multi-step Reasoning in Video Grounded Dialogue",
+    author = "Le, Hung  and
+      Sankar, Chinnadhurai  and
+      Moon, Seungwhan  and
+      Beirami, Ahmad  and
+      Geramifard, Alborz  and
+      Kottur, Satwik",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.439",
+    doi = "10.18653/v1/2021.acl-long.439",
+    pages = "5651--5665",
+    abstract = "A video-grounded dialogue system is required to understand both dialogue, which contains semantic dependencies from turn to turn, and video, which contains visual cues of spatial and temporal scene variations. Building such dialogue systems is a challenging problem, involving various reasoning types on both visual and language inputs. Existing benchmarks do not have enough annotations to thoroughly analyze dialogue systems and understand their capabilities and limitations in isolation. These benchmarks are also not explicitly designed to minimise biases that models can exploit without actual reasoning. To address these limitations, in this paper, we present DVD, a Diagnostic Dataset for Video-grounded Dialogue. The dataset is designed to contain minimal biases and has detailed annotations for the different types of reasoning over the spatio-temporal space of video. Dialogues are synthesized over multiple question turns, each of which is injected with a set of cross-turn semantic relationships. We use DVD to analyze existing approaches, providing interesting insights into their abilities and limitations. In total, DVD is built from 11k CATER synthetic videos and contains 10 instances of 10-round dialogues for each video, resulting in more than 100k dialogues and 1M question-answer pairs. Our code and dataset are publicly available.",
 }
 ```
 	
